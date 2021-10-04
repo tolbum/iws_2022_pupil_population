@@ -32,8 +32,12 @@ creche_list <- school_list_creche %>%
   
   select(!"s_n") %>%
   
-  mutate(birthday_date = as.Date(birthday_date, origin = "1970-01-01"))
+  mutate(birthday_date = as.Date(birthday_date, origin = "1970-01-01")) %>%
 
+  filter(!name == "NA") %>%
+
+  distinct()
+  
 # clean school_list_playgrp
 
 playgrp_list <- school_list_playgrp %>%
@@ -41,8 +45,11 @@ playgrp_list <- school_list_playgrp %>%
 
 select(!"s_n") %>%
 
-mutate(birthday_date = as.Date(birthday_date, origin = "1970-01-01"))
+  mutate(birthday_date = as.Date(birthday_date, origin = "1970-01-01")) %>%
   
+  filter(!name == "NA") %>%
+  
+  distinct()
 
 # clean school_list_prep
 
@@ -51,7 +58,11 @@ prep_list <- school_list_prep %>%
   
   select(!"s_n") %>%
   
-  mutate(birthday_date = as.Date(birthday_date, origin = "1970-01-01"))
+  mutate(birthday_date = as.Date(birthday_date, origin = "1970-01-01")) %>%
+  
+  filter(!name == "NA") %>%
+  
+  distinct()
 
 # clean school_list_nursery_1
 
@@ -60,7 +71,11 @@ nursery_1_list <- school_list_nursery_1 %>%
   
   select(!"s_n") %>%
   
-  mutate(birthday_date = as.Date(birthday_date, origin = "1970-01-01"))
+  mutate(birthday_date = as.Date(birthday_date, origin = "1970-01-01")) %>%
+  
+  filter(!name == "NA") %>%
+  
+  distinct()
 
 # clean school_list_nursery_2
 
@@ -69,7 +84,11 @@ nursery_2_list <- school_list_nursery_2 %>%
   
   select(!"s_n") %>%
   
-  mutate(birthday_date = as.Date(birthday_date, origin = "1970-01-01"))
+  mutate(birthday_date = as.Date(birthday_date, origin = "1970-01-01")) %>%
+  
+  filter(!name == "NA") %>%
+  
+  distinct()
 
 # clean school_list_primary_1
 
@@ -78,8 +97,11 @@ primary_1_list <- school_list_primary_1 %>%
 
 select(!"s_n") %>%
   
-mutate(birthday_date = as.Date(birthday_date, origin = "1970-01-01")) 
-
+  mutate(birthday_date = as.Date(birthday_date, origin = "1970-01-01")) %>%
+  
+  filter(!name == "NA") %>%
+  
+  distinct()
 
 ## Organizing class lists into cleaned school list
 
