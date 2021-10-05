@@ -136,14 +136,14 @@ school_list_cleaned <- bind_rows(creche_list,
 
 school_list_cleaned %>%
   
+  ggplot(aes(x=class_arm)) +
+  
   theme_bw() +
   
   theme(panel.grid.major = element_blank(), 
         panel.grid.minor = element_blank(),
         panel.border = element_blank(), 
         axis.line = element_line()) +
-  
-  ggplot(aes(x=class_arm)) +
   
   geom_bar(aes(fill = gender)) +
   
